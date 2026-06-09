@@ -1,0 +1,8 @@
+title "status (text)"
+trace $CLI experimental air status 123
+
+title "status (json)"
+trace $CLI experimental air status 123 -o json
+
+title "invalid run id"
+errcode trace $CLI experimental air status notanumber
