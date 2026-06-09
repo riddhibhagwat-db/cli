@@ -3,9 +3,6 @@
 title "run"
 errcode trace $CLI experimental air run
 
-title "status"
-errcode trace $CLI experimental air status 123
-
 title "list"
 errcode trace $CLI experimental air list
 
