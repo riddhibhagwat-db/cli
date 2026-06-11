@@ -1,0 +1,5 @@
+title "version (text)"
+trace $CLI experimental air version
+
+title "version (json)"
+trace $CLI experimental air version -o json

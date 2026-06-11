@@ -1,12 +1,12 @@
 
 === version (text)
->>> [CLI] experimental ai version
+>>> [CLI] experimental air version
 Databricks AI runtime CLI v[DEV_VERSION]
 Host: [DATABRICKS_URL]
 User: user@example.com
 
 === version (json)
->>> [CLI] experimental ai version -o json
+>>> [CLI] experimental air version -o json
 {
   "cli_version": "[DEV_VERSION]",
   "connectivity": "ok",

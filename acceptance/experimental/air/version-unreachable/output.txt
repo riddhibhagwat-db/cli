@@ -1,6 +1,6 @@
 
 === version (workspace unreachable)
->>> [CLI] experimental ai version
+>>> [CLI] experimental air version
 Databricks AI runtime CLI v[DEV_VERSION]
 Workspace: unreachable
 Error: Invalid access token.

@@ -1,4 +1,4 @@
-package ai
+package air
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// TestNewRegistersAllSubcommands asserts the `ai` command wires up every
+// TestNewRegistersAllSubcommands asserts the `air` command wires up every
 // expected subcommand, so none is accidentally dropped from New.
 func TestNewRegistersAllSubcommands(t *testing.T) {
 	registered := make(map[string]bool)

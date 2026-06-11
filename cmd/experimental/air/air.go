@@ -1,4 +1,4 @@
-package ai
+package air
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ import (
 // `version` is implemented; the rest are stubs pending the port from Python `air`.
 func New() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "ai",
+		Use:   "air",
 		Short: "Run and manage AI runtime training workloads",
 		Long: `Run and manage AI runtime training workloads on Databricks serverless GPU compute.
 
@@ -33,5 +33,5 @@ experimental and may change in future versions.`,
 
 // notImplemented returns the placeholder error used by milestone-0 stubs.
 func notImplemented(name string) error {
-	return fmt.Errorf("`ai %s` is not implemented yet", name)
+	return fmt.Errorf("`air %s` is not implemented yet", name)
 }
