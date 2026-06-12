@@ -9,7 +9,9 @@ import (
 )
 
 // gpuDisplayNames maps the GPU identifiers returned by the backend to the short
-// names we show to users. Unknown identifiers are shown unchanged.
+// names we show to users. Unknown identifiers are shown unchanged. It includes
+// legacy identifiers (h100_80gb, a10) so status still renders older runs, even
+// though those types can no longer be submitted.
 var gpuDisplayNames = map[string]string{
 	"h100_80gb":  "H100",
 	"a10":        "A10",
@@ -144,8 +146,8 @@ func accelerators(run *jobs.Run) string {
 	return fmt.Sprintf("%dx %s", task.Compute.NumGpus, gpuDisplayName(task.Compute.GpuType))
 }
 
-// gpuDisplayName returns the friendly name for a GPU identifier, falling back to
-// the identifier itself when it is not one we recognize.
+// gpuDisplayName returns the friendly name for a GPU identifier returned by the
+// backend, falling back to the identifier itself when it is not one we recognize.
 func gpuDisplayName(gpuType string) string {
 	if name, ok := gpuDisplayNames[gpuType]; ok {
 		return name

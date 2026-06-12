@@ -1,6 +1,7 @@
 package air
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/spf13/cobra"
@@ -23,7 +24,7 @@ func TestStubCommandsReturnNotImplemented(t *testing.T) {
 		t.Run(name, func(t *testing.T) {
 			require.NotNil(t, cmd.RunE, "command should define RunE")
 			err := cmd.RunE(cmd, nil)
-			assert.ErrorContains(t, err, "not implemented")
+			assert.EqualError(t, err, fmt.Sprintf("`air %s` is not implemented yet", name))
 		})
 	}
 }
